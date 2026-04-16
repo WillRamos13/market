@@ -1,0 +1,123 @@
+html {
+    background-color: darkgray;
+}
+body {
+    margin: 0;
+}
+/*inicio de parte superior*/
+#cabecera {
+    padding: 15px;
+    height: 80px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#superior {
+    display: block;
+}
+#propaganda {
+    width: 100%;    
+    height: 50%;
+    object-fit: cover;
+}
+#logo {
+    width: 4rem;
+    margin: auto auto auto 1%;
+}
+#titulo {
+    width: 60%;
+    font-size: 1.6rem;
+    padding: 15px;
+    color: white;
+    background-color: black;
+    border-radius: 40px;
+    text-align: center;
+    border: 1px solid white;
+}   
+a:link {
+    color: rgb(255, 255, 255);
+}
+a:visited {
+    color: rgb(255, 255, 255);
+}
+a:hover {
+    color: rgb(255, 255, 255);
+}
+a:active {
+    color: yellow;
+}
+#menu {
+    background-color: black;
+    color: white;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
+    margin: auto 1% auto auto;
+}
+#menu:hover {
+    background-color: gray;
+    border-radius: 50px;
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.4);
+    transform: translateY(-2px);
+    transition: all 0.2s ease;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    padding: 2px 30px 2px 30px;
+}
+/*menu*/
+li{
+    position: relative;
+}
+li ul{
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+    border-radius: 1.2rem;
+    background-color: black;
+    list-style: none;
+}
+li ul li{
+    padding: 8px 12px;
+}
+li:hover ul{
+    display: block;
+}
+/*fin de menu*/
+/*fin de parte superior*/
+/*cuerpo*/
+#cuerpo {
+    margin: 0;
+    padding: 15px;
+}
+#productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    height: 100%;
+}
+.oferta1 {
+    text-align: center;
+    font-size: 1rem;
+    color: white;  
+    background-color: black;
+    border-radius: 40px;
+    border: 1px solid white;
+    padding: 15px;
+}
+.fproducto {
+    border-radius: 10px;
+    width: 100%;
+    height: 20%;
+    object-fit: cover;
+}
+/*fin de cuerpo*/
+img {
+
+}
