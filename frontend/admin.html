@@ -14,52 +14,36 @@
 
 <main class="container">
 
-    <!-- FORMULARIO -->
     <section class="form-section">
         <h2>Agregar Producto</h2>
 
         <form id="formProducto">
-            <label>Nombre</label>
-            <input type="text" id="nombre" placeholder="Ej: Polo Nike">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" placeholder="Ej: Polo Nike" required>
 
-            <label>Precio</label>
-            <input type="number" id="precio" placeholder="Ej: 49.90">
+            <label for="precio">Precio</label>
+            <input type="number" id="precio" placeholder="Ej: 49.90" required>
 
-            <label>Descripción</label>
-            <textarea id="descripcion" placeholder="Descripción del producto"></textarea>
+            <label for="descripcion">Descripción</label>
+            <textarea id="descripcion" placeholder="Descripción del producto" required></textarea>
 
-            <label>Imagen (URL)</label>
-            <input type="text" id="imagen" placeholder="https://...">
+            <label for="imagen">Imagen (URL)</label>
+            <input type="text" id="imagen" placeholder="https://..." required>
 
             <button type="submit">Guardar Producto</button>
         </form>
     </section>
 
-    <!-- LISTA -->
     <section class="list-section">
         <h2>Productos</h2>
 
-        <div class="products">
-
-            <!-- EJEMPLO CARD -->
-            <article class="card">
-                <img src="img/oferta1.png" alt="producto">
-                <h3>Polo Deportivo</h3>
-                <p>Producto de ejemplo</p>
-                <span>S/. 50</span>
-            </article>
-
-            <article class="card">
-                <img src="img/oferta2.png" alt="producto">
-                <h3>Zapatillas</h3>
-                <p>Producto de ejemplo</p>
-                <span>S/. 120</span>
-            </article>
+        <div class="products" id="listaProductos">
 
         </div>
     </section>
 
 </main>
 
+<script src="admin.js"></script>
 </body>
 </html>
