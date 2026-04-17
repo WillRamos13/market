@@ -3,11 +3,22 @@ const form = document.getElementById("formProducto");
 form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
+    const nombre = document.getElementById("nombre").value;
+    const precio = document.getElementById("precio").value;
+    const descripcion = document.getElementById("descripcion").value;
+    const imagen = document.getElementById("imagen").value;
+
+    // VALIDACIÓN CORRECTA
+    if (!nombre || !precio || !descripcion || !imagen) {
+        alert("Completa todos los campos");
+        return;
+    }
+
     const producto = {
-        nombre: document.getElementById("nombre").value,
-        precio: document.getElementById("precio").value,
-        descripcion: document.getElementById("descripcion").value,
-        imagen: document.getElementById("imagen").value
+        nombre,
+        precio,
+        descripcion,
+        imagen
     };
 
     try {
@@ -19,15 +30,13 @@ form.addEventListener("submit", async (e) => {
             body: JSON.stringify(producto)
         });
 
-        const data = await res.json();
-        alert("Producto guardado ✔");
+        await res.json();
 
+        alert("Producto guardado ✔");
         form.reset();
+
     } catch (error) {
+        console.error(error);
         alert("Error al guardar producto");
     }
-    if (!nombre || !precio || !descripcion || !imagen) {
-    alert("Completa todos los campos");
-    return;
-}
 });
