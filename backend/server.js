@@ -7,7 +7,6 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// CONEXIÓN POSTGRESQL
 const pool = new Pool({
     connectionString: process.env.DATABASE_URL,
     ssl: {
@@ -15,11 +14,9 @@ const pool = new Pool({
     }
 });
 
-// TEST
 app.get("/", (req, res) => {
     res.send("API funcionando");
 });
-
 
 app.get("/productos", async (req, res) => {
     try {
@@ -30,7 +27,6 @@ app.get("/productos", async (req, res) => {
         res.status(500).json({ error: "Error al obtener productos" });
     }
 });
-
 
 app.post("/productos", async (req, res) => {
     const { nombre, precio, descripcion, imagen } = req.body;
@@ -51,7 +47,6 @@ app.post("/productos", async (req, res) => {
         res.status(500).json({ error: "Error al crear producto" });
     }
 });
-
 
 app.put("/productos/:id", async (req, res) => {
     const { id } = req.params;
@@ -74,7 +69,6 @@ app.put("/productos/:id", async (req, res) => {
     }
 });
 
-
 app.delete("/productos/:id", async (req, res) => {
     const { id } = req.params;
 
@@ -95,10 +89,6 @@ app.delete("/productos/:id", async (req, res) => {
     }
 });
 
-
-// =======================
-// SERVIDOR
-// =======================
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {

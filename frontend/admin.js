@@ -3,10 +3,6 @@ const API = "https://marketfash.onrender.com/productos";
 const form = document.getElementById("formProducto");
 const contenedor = document.getElementById("listaProductos");
 
-
-// =======================
-// CARGAR PRODUCTOS (GET)
-// =======================
 async function cargarProductos() {
     try {
         const res = await fetch(API);
@@ -35,10 +31,6 @@ async function cargarProductos() {
     }
 }
 
-
-// =======================
-// CREAR PRODUCTO (POST)
-// =======================
 form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
@@ -64,7 +56,7 @@ form.addEventListener("submit", async (e) => {
         alert("Producto guardado ✔");
         form.reset();
 
-        cargarProductos(); // 🔥 refresca lista
+        cargarProductos();
 
     } catch (error) {
         console.error(error);
@@ -72,10 +64,6 @@ form.addEventListener("submit", async (e) => {
     }
 });
 
-
-// =======================
-// ELIMINAR PRODUCTO (DELETE)
-// =======================
 async function eliminarProducto(id) {
     if (!confirm("¿Seguro que quieres eliminar este producto?")) return;
 
@@ -91,10 +79,6 @@ async function eliminarProducto(id) {
     }
 }
 
-
-// =======================
-// EDITAR PRODUCTO (PUT)
-// =======================
 async function editarProducto(id) {
     const nombre = prompt("Nuevo nombre:");
     const precio = prompt("Nuevo precio:");
@@ -122,8 +106,4 @@ async function editarProducto(id) {
     }
 }
 
-
-// =======================
-// INICIAR
-// =======================
 cargarProductos();
