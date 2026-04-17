@@ -1,5 +1,5 @@
 const express = require('express');
-const {pool, Connection} = require ("pg");
+const { pool } = require("pg");
 const cors = require('cors');
 const app = express();
 
