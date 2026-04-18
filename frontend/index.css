@@ -43,6 +43,7 @@ a {
 a:active {
     color: yellow;
 }
+
 #menu {
     background-color: black;
     color: white;
@@ -56,22 +57,21 @@ a:active {
 }
 #menu:hover {
     background-color: gray;
-    border-radius: 50px;
     box-shadow: 2px 2px 6px rgba(0,0,0,0.4);
     transform: translateY(-2px);
 }
 
-#menu ul { /* corregido selector */
+#menu ul {
     list-style: none;
     display: flex;
-    padding: 2px 30px 2px 30px;
+    padding: 2px 30px;
 }
 
 /*menu*/
-li{
+li {
     position: relative;
 }
-li ul{
+li ul {
     position: absolute;
     top: 100%;
     left: 50%;
@@ -81,10 +81,11 @@ li ul{
     background-color: black;
     list-style: none;
 }
-li ul li{
+li ul li {
     padding: 8px 12px;
 }
-li:hover ul{
+
+#menu li:hover > ul {
     display: block;
 }
 /*fin de menu*/
@@ -95,12 +96,14 @@ li:hover ul{
     margin: 0;
     padding: 15px;
 }
+
 #productos {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 10px;
-    max-width: 100%; /* corregido */
+    max-width: 100%;
 }
+
 .oferta1 {
     text-align: center;
     font-size: 1rem;
@@ -109,17 +112,21 @@ li:hover ul{
     border-radius: 40px;
     border: 1px solid white;
     padding: 15px;
-    transition: transform 0.2s ease; /* corregido */
+    max-width: 150px; /* 🔴 cambio solicitado */
+    transition: transform 0.2s ease;
 }
+
 .oferta1:hover {
     transform: scale(1.03);
 }
+
 .fproducto {
     border-radius: 10px;
     width: 100%;
     height: 60px;
     object-fit: cover;
 }
+
 * {
     box-sizing: border-box;
 }
