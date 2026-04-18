@@ -4,10 +4,11 @@ html {
 body {
     margin: 0;
 }
+
 /*inicio de parte superior*/
 #cabecera {
     padding: 15px;
-    height: 80px;
+    min-height: 80px;
     background-color: white;
     display: flex;
     align-items: center;
@@ -58,13 +59,14 @@ a:active {
     border-radius: 50px;
     box-shadow: 2px 2px 6px rgba(0,0,0,0.4);
     transform: translateY(-2px);
-
 }
-nav ul{
+
+#menu ul { /* corregido selector */
     list-style: none;
     display: flex;
     padding: 2px 30px 2px 30px;
 }
+
 /*menu*/
 li{
     position: relative;
@@ -87,6 +89,7 @@ li:hover ul{
 }
 /*fin de menu*/
 /*fin de parte superior*/
+
 /*cuerpo*/
 #cuerpo {
     margin: 0;
@@ -96,8 +99,7 @@ li:hover ul{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 10px;
-    height: 100%;
-    width: 150px;
+    max-width: 100%; /* corregido */
 }
 .oferta1 {
     text-align: center;
@@ -107,6 +109,7 @@ li:hover ul{
     border-radius: 40px;
     border: 1px solid white;
     padding: 15px;
+    transition: transform 0.2s ease; /* corregido */
 }
 .oferta1:hover {
     transform: scale(1.03);
