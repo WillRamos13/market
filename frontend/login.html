@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="login.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header id="superior">
+        <img id="propaganda" src="img/tienda.png" alt="">
+    </header>
+
+    <header id="cabecera">
+        <img id="logo" src="img/image.png" alt="">
+        <h1 id="titulo">FashMarket</h1>
+
+        <nav id="menu">
+            <ul>
+                <li id="servicio">☰
+                    <ul>
+                        <li class="submenu">Trabaja con nosotros</li>
+                        <li><a class="submenu" href="https://www.youtube.com/?app=desktop&hl=es">Perfil</a></li>
+                        <li><a class="submenu" href="admin.html">Panel administrativo</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+    <div class="container">
+        <h2>Inicia sesion o Registrate</h2>
+        <br>
+        <form id="loginForm">
+            <label class="datos" for="nombres">Nombres:</label>
+            <br>
+            <input class="datosingresados" type="text" id="nombres" name="nombres" required>
+            <br>
+            <label class="datos" for="apellidos">Apellidos:</label>
+            <br>
+            <input class="datosingresados" type="text" id="apellidos" name="apellidos" required>
+            <br>
+            <label class="datos" for="dni">DNI:</label>
+            <br>
+            <input class="datosingresados" type="text" id="dni" name="dni" required>
+            <br>
+            <label class="datos" for="username">Usuario:</label>
+            <br>
+            <input class="datosingresados" type="text" id="username" name="username" required>
+            <br>
+            <label class="datos" for="password">Contraseña:</label>
+            <br>
+            <input class="datosingresados" type="password" id="password" name="password" required>
+            <br>
+            <label class="datos" for="correo">Correo electrónico:</label>
+            <br>
+            <input class="datosingresados" type="email" id="correo" name="correo" required>
+            <br>
+            <label class="datos" for="telefono">Número de teléfono:</label>
+            <br>
+            <input class="datosingresados" type="tel" id="telefono" name="telefono" required>
+            <br>
+            <button class="datos" type="submit">Iniciar Sesión</button>
+        </form>
+    </div>
+    <div id="mensaje">
+        <p id="mensajeTexto">beneficios por registrarte unicos por el dia de hoy</p>
+    </div>
+    </main>
+    <script src="login.js"></script>
+</body>
+</html>

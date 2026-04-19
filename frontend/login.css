@@ -86,60 +86,31 @@ li:hover ul{
     display: block;
 }
 /*fin de menu*/
-/*fin de parte superior*/
 
-/*cuerpo*/
-#cuerpo {
-    margin: 0;
-    padding: 15px;
-}
-
-#productos {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 200px));
+main {
+    display: flex;
     gap: 10px;
     height: 100%;
-}
+    margin: 2% 10% auto 10%;
+    padding: 2%;
+    background-color: rgb(255, 255, 255);
 
-.oferta1 {
-    text-align: center;
-    font-size: 1rem;
-    color: white;  
-    background-color: black;
-    border-radius: 40px;
-    border: 1px solid white;
-    padding: 15px;
 }
-.oferta1:hover {
-    transform: scale(1.03);
+.container {
+    display: grid;
+    width: 60%;
 }
-.fproducto {
-    border-radius: 10px;
-    width: 100%;
-    height: 60px;
-    object-fit: cover;
+.datos {
+        margin: 10px;
+        padding: 5px;
+        color: rgb(0, 0, 0);
 }
-* {
-    box-sizing: border-box;
+.datosingresados {
+    margin: 10px;
+    padding: 5px;
+    color: white;
 }
-/*fin de cuerpo*/
-/* Ocupa toda la pantalla */
-#intro {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background: black;
-    z-index: 1000;
-}
-
-/* Video ajustado */
-#videoIntro {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* Oculta el contenido al inicio */
-#contenido {
-    display: none;
+#mensaje {
+    width: 40%;
+    color: red;
 }

@@ -18,3 +18,13 @@ async function cargarProductos() {
 }
 
 cargarProductos();
+
+const video = document.getElementById("videoIntro");
+const intro = document.getElementById("intro");
+const contenido = document.getElementById("contenido");
+
+// Cuando termina el video
+video.addEventListener("ended", () => {
+    intro.style.display = "none";
+    contenido.style.display = "block";
+});
