@@ -123,23 +123,3 @@ li:hover ul{
     box-sizing: border-box;
 }
 /*fin de cuerpo*/
-/* Ocupa toda la pantalla */
-#intro {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background: black;
-    z-index: 1000;
-}
-
-/* Video ajustado */
-#videoIntro {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* Oculta el contenido al inicio */
-#contenido {
-    display: none;
-}
